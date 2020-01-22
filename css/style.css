@@ -1,0 +1,419 @@
+/**********************************************************************************************
+                                General
+***********************************************************************************************/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;
+    list-style: none !important;
+    outline: none !important;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+span {
+    display: inline-block;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+}
+
+
+/* ---------------- Typography -----------------*/
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+/* ----- vertical middle align ----*/
+
+.v-middle {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #343434;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    line-height: 1.8;
+    margin: 0;
+    font-size: 16px;
+    color: #7e7e7e;
+}
+
+.section-head {
+    position: relative;
+}
+
+.head-left {
+    margin-bottom: 30px;
+    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f4f4f4;
+    position: relative;
+}
+
+.head-left:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: #db4aff;
+    height: 1px;
+    width: 70px;
+}
+
+.i-hidden {
+    display: none;
+}
+
+
+/* -------------------------------------------------------
+                     Navbar 
+-------------------------------------------------------- */
+
+.active {
+    font-weight: bold;
+}
+
+.navbar-default {
+    padding: 20px 0 30px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar-default .navbar-nav>li>a {
+    margin: 0 !important;
+    color: #eee !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.navbar-default .navbar-nav>li {
+    font-size: 14px;
+    margin: 25px 20px 0;
+    padding: 5px 10px;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-default .navbar-nav>li .active:after {
+    bottom: -10px;
+    opacity: 1;
+}
+
+.nav-scroll {
+    background: #fff;
+    border-bottom: 1px solid rgba(12, 12, 12, 0.04);
+    min-height: 60px;
+    line-height: 60px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.nav-scroll .logo {
+    padding-top: 5px;
+    color: #000;
+}
+
+.nav-scroll .navbar-nav>li>a {
+    color: #424242 !important;
+}
+
+.logo {
+    width: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    color: #fff;
+    padding-top: 10px;
+}
+
+nav ul li {
+    transform: translateX(100rem);
+    animation: sliderIn 1s forwards;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #db4aff;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+nav ul li a::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+nav ul li a::after {
+    bottom: -5px;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+@keyframes sliderIn {
+    from {}
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* -------------------------------------------------------
+                     Header 
+-------------------------------------------------------- */
+
+.header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(../img/home.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    animation-duration: 1s;
+    animation-name: aparecer;
+}
+
+.header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.header .v-middle {
+    z-index: 9;
+}
+
+.header .caption {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.header .caption h4 {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.header .caption h1 {
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header .caption .type span {
+    font-size: 37px;
+    font-weight: 100;
+}
+
+.header .caption h3 {
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+
+.header h3 {
+    animation-duration: 4s;
+    animation-name: aparecer;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* CONTACTO */
+
+.contact-head span {
+    color: #db4aff;
+}
+
+.container p {
+    margin-bottom: 30px;
+}
+
+.contact-input {
+    height: auto;
+}
+
+.espaciado {
+    margin-bottom: 20px;
+}
+
+.contact-input label {
+    font-weight: normal !important;
+}
+
+.button {
+    width: 200px;
+    border-radius: 40px;
+    color: #fff;
+    background-color: #db4aff;
+    border-color: #db4aff;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.contact-list {
+    margin-top: 40px;
+}
+
+
+/***** SERVICIOS *****/
+
+.container-row {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .card {
+    position: relative;
+    box-shadow: -2px 5px 6px rgba(0, 0, 0, 0.1)
+}
+
+.cards .card .face {
+    width: 450px;
+    transition: 0.5s;
+}
+
+.cards .card .face.face1 {
+    position: relative;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.cards .card .face.face1 .content h6 {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.cards .card .face.face2 {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}

@@ -245,6 +245,10 @@ nav ul li a:hover::after {
     }
 }
 
+.navbar-toggle {
+    display: none !important;
+}
+
 
 /* -------------------------------------------------------
                      Header 
@@ -329,11 +333,9 @@ nav ul li a:hover::after {
 }
 
 
-/* CONTACTO */
-
-.contact-head span {
-    color: #db4aff;
-}
+/* -------------------------------------------------------
+                     CONTACTO 
+-------------------------------------------------------- */
 
 .container p {
     margin-bottom: 25px;
@@ -356,11 +358,52 @@ nav ul li a:hover::after {
     font-weight: normal !important;
 }
 
+.contact-list {
+    margin-top: 22px;
+}
+
+.contact-padding {
+    padding-top: 40px;
+}
+
+.contact-list .icon {
+    font-size: 30px;
+    color: #db4aff;
+}
+
+.contact-head {
+    margin-bottom: 20px;
+}
+
+.contact-head span {
+    color: #db4aff;
+}
+
+.contact .header-box h3:before {
+    width: 229px;
+    left: calc(50% - 245px);
+}
+
+.contact .header-box h3:after {
+    width: 235px;
+}
+
+.contact .container .background {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.contact .container .background:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
 .button {
     width: 100%;
-    /*200px;*/
     border-radius: 4px;
-    color: #fff;
+    color: #fff !important;
     background-color: #db4aff;
     border-color: #db4aff;
     font-weight: 900;
@@ -371,27 +414,329 @@ nav ul li a:hover::after {
     color: #fff;
 }
 
-.contact-list {
-    margin-top: 22px;
+
+/* -------------------------------------------------------
+                     BIOGRAFIA 
+-------------------------------------------------------- */
+
+.bio-head {
+    margin-bottom: 20px;
 }
 
-.contact-border {
-    box-shadow: -2px 3px 6px rgba(0, 0, 0, 0.1);
-    padding: 0px 5px 0px 5px;
+
+/* titulos */
+
+.header-box {
+    position: relative;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
-.contact-padding {
-    padding-top: 40px;
+.header-box h3 {
+    font-size: 20px;
+    color: #434343;
 }
 
-.contact-list .icon {
-    font-size: 30px;
-    /* margin-bottom: 20px; */
+.header-box:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: calc(50% - 6px);
+    bottom: -15px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #db4aff;
+}
+
+.header-box h3:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    left: calc(50% - 45px);
+    bottom: -10px;
+    background-color: #db4aff;
+}
+
+.header-box h3:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    left: calc(50% + 15px);
+    bottom: -10px;
+    background-color: #db4aff;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+
+/* Experiencia */
+
+.experience .item {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.experience .item:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #db4aff;
+}
+
+.experience .item:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    top: 21px;
+    left: 6px;
+    background-color: #db4aff;
+}
+
+.experience .main p {
     color: #db4aff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.experience .main p span {
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.experience .main h4 {
+    position: relative;
+    line-height: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.experience .main h4:before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: -46px;
+    background-color: #fff;
+    border: 2px solid #db4aff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.experience .item:hover h4:before {
+    background-color: #db4aff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.experience .item p {
+    font-size: 13px;
+}
+
+.box-1,
+.box-2 {
+    position: relative;
+    padding: 30px;
+    background-color: #f9f9f9;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    border-radius: 10px;
+    padding-bottom: 1px;
+}
+
+.box-1:hover,
+.box-2:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.box-1:after,
+.box-2:after {
+    border-top: 35px solid #fff;
+}
+
+.box-2:after {
+    border-bottom: 35px solid #fff;
+}
+
+.box-1:before,
+.box-2:before {
+    border-bottom: 35px solid #fff;
 }
 
 
-/***** SERVICIOS *****/
+/* Skills Bar */
+
+.skill-item {
+    padding: 0 20px;
+}
+
+.skill-item .progress-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.skill-item .progress {
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 40px;
+    overflow: visible;
+}
+
+.skill-item .progress .progress-bar {
+    position: relative;
+    background-color: #db4aff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.skill-item .progress .progress-bar:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -5px;
+    right: 0px;
+    padding: 4px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #db4aff;
+}
+
+.skill-item .progress .progress-value {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    color: #0e0f10;
+    font-size: 14px;
+}
+
+.chart {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 25px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 24px;
+    padding: 40px 0 0;
+    color: #0e0f10;
+    font-weight: 800;
+}
+
+.chart p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+/* Work Process */
+
+.work-process .ltr {
+    text-align: right;
+}
+
+.work-process .rtl {
+    text-align: left;
+}
+
+.work-process .wp-step {
+    margin: 0;
+    color: #db4aff;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.work-process h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.work-process p {
+    font-size: 14px;
+}
+
+.work-process .single-wp+.single-wp {
+    padding-top: 35px;
+}
+
+.work-process .wp-circle {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    margin-top: 12px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #db4aff;
+}
+
+.work-process .wp-circle:before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 48px);
+    height: calc(100% + 48px);
+    top: -24px;
+    left: -24px;
+    border: 1px solid #db4aff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.work-process .wp-circle h4 {
+    font-size: 35px;
+    line-height: 62px;
+    text-transform: uppercase;
+    margin-top: 24px;
+}
+
+.work-process .dots {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #db4aff;
+}
+
+.work-process .dots.top-l,
+.work-process .dots.bottom-l {
+    left: 0px;
+}
+
+.work-process .dots.top-l,
+.work-process .dots.top-r {
+    top: 57px;
+}
+
+.work-process .dots.bottom-l,
+.work-process .dots.bottom-r {
+    bottom: 57px;
+}
+
+.work-process .dots.top-r,
+.work-process .dots.bottom-r {
+    right: 0px;
+}
+
+
+/* -------------------------------------------------------
+                     SERVICIOS 
+-------------------------------------------------------- */
 
 .container-row {
     margin: 0;
@@ -440,7 +785,9 @@ nav ul li a:hover::after {
 }
 
 
-/****** responsive ******/
+/* -------------------------------------------------------
+                     RESPONSIVE 
+-------------------------------------------------------- */
 
 @media screen and (max-width: 767px) {
     /** navbar **/
@@ -477,10 +824,50 @@ nav ul li a:hover::after {
         border-bottom: 1px solid rgba(12, 12, 12, 0.04);
         background: #fff;
         padding-bottom: 23px;
-        /* margin-top: 5px; */
     }
     .nav-scroll .icon-bar {
         background: #111;
+    }
+    .navbar-toggle {
+        display: inline !important;
+    }
+    /** bio **/
+    .mob-box-mt {
+        margin-top: 100px !important;
+    }
+    .experience .main p {
+        display: inherit;
+    }
+    .experience .main h4 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .hidden-sm {
+        display: none;
+    }
+    .single-wp.process-1,
+    .single-wp.process-3 {
+        border-bottom: none !important;
+        border-right: 1px solid #db4aff !important;
+    }
+    .single-wp.process-2,
+    .single-wp.process-4 {
+        border-bottom: none !important;
+        border-left: 1px solid #db4aff !important;
+    }
+    .single-wp:nth-child(2n+1) {
+        text-align: right;
+        padding-left: 0 !important;
+    }
+    .single-wp:nth-child(2n) {
+        text-align: left;
+        padding-right: 0 !important;
+    }
+    .single-wp {
+        padding: 30px !important;
+    }
+    .work-process {
+        padding-bottom: 30px;
     }
     /** contacto **/
     .contact-padding {
@@ -489,5 +876,18 @@ nav ul li a:hover::after {
     .contact-list {
         border: 1px solid rgba(0, 0, 0, 0.1);
         padding-top: 26px;
+        border-radius: 10px;
+    }
+    .contact .container .background {
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-bottom: 12px;
+    }
+    .contact .header-box h3:before {
+        width: 145px;
+        left: calc(50% - 160px);
+    }
+    .contact .header-box h3:after {
+        width: 145px;
     }
 }

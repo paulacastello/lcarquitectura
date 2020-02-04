@@ -393,6 +393,8 @@ nav ul li a:hover::after {
     border-radius: 10px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .contact .container .background:hover {

@@ -845,23 +845,21 @@ nav ul li a:hover::after {
     .hidden-sm {
         display: none;
     }
-    .single-wp.process-1,
-    .single-wp.process-3 {
-        border-bottom: none !important;
-        border-right: 1px solid #db4aff !important;
-    }
-    .single-wp.process-2,
-    .single-wp.process-4 {
+    .single-wp.process-1 {
         border-bottom: none !important;
         border-left: 1px solid #db4aff !important;
     }
-    .single-wp:nth-child(2n+1) {
-        text-align: right;
-        padding-left: 0 !important;
+    .single-wp.process-2 {
+        border-bottom: none !important;
+        border-right: 1px solid #db4aff !important;
     }
-    .single-wp:nth-child(2n) {
+    .single-wp:nth-child(2n+1) {
         text-align: left;
         padding-right: 0 !important;
+    }
+    .single-wp:nth-child(2n) {
+        text-align: right;
+        padding-left: 0 !important;
     }
     .single-wp {
         padding: 30px !important;
